@@ -1,7 +1,7 @@
-import { fakeUsersDb } from './get-users.js';
+import { getById } from '../../repositories/users/users.js';
 
 export function getUserById (req, res, next) {
-  const user = fakeUsersDb.find(u => u.id == req.params.id);
+  const user = getById(req.params.id);
 
   res.send(user);
 }
