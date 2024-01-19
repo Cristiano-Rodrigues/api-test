@@ -1,4 +1,4 @@
-const fakeUsersDb = [];
+export const fakeUsersDb = [];
 
 function populateDb () {
   let limit = 10;

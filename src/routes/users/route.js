@@ -1,5 +1,9 @@
-import { getUsers } from './getUsers.js'
+import { getUsers } from './get-users.js'
+import { getUserById } from './get-users-by-id.js';
 
 export default router => {
-  return router.get('/users', getUsers);
+  router.get('/users', getUsers);
+  router.get('/users/:id', getUserById);
+
+  return router;
 }

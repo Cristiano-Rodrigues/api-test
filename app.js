@@ -22,7 +22,7 @@ try {
     app.use('/api/v1/', exported(router));
   }
 } catch (error) {
-  console.error('Can\'t load route files :(');
+  console.error('Can\'t load route files :(', error);
 }
 
 async function filterDirectories (files) {
